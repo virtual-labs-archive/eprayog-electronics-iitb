@@ -1,0 +1,14 @@
+DIODE CLAMPING CKT
+.MODEL DIO D(IS=1.8E-10 RS=2 BV=50.0 IBV=1e-4+ CJO=2e-12 M=0.333 N=2.06 TT=4.32e-9)
+V1 1 0 sin(0 10V 1K)
+C1 1 2 1UF
+D1 0 2 DIO
+.tran 0.1m 1m
+.end
+
+.control
+run
+plot v(1) v(2)
+plot v(1)
+plot v(2)
+.endc

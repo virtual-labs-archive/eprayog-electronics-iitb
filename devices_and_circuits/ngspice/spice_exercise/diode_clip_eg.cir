@@ -1,0 +1,18 @@
+DIODE CLIPPING CIRCUIT
+.MODEL DIO D(IS=1.8E-10 RS=2 BV=50.0 IBV=1e-4+ CJO=2e-12 M=0.333 N=2.06 TT=4.32e-9)
+
+V1 1 0 sin(0 10 1k)
+R1 1 2 1k
+D1 2 3 DIO
+V2 3 4 dc 1V
+R2 4 0 1.5k
+D2 5 2 DIO
+R3 5 0 0.5k
+.tran 100u 1m
+.end
+
+.control
+run
+plot v(2) vs v(1)
+plot v(1),v(2)
+.endc

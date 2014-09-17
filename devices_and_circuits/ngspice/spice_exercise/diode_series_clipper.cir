@@ -1,0 +1,14 @@
+ SERIES CLIPPER
+
+.MODEL DIO D( IS=1.8E-10 RS=2 BV=50.0 IBV=1e-4+ CJO=2e-12 M=0.333 N=2.06 TT=4.32e-9)
+
+R1 2 0 10k
+D1 1 2 DIO
+v1 1 0 sin(0 5V 1k)
+.tran 100us 1ms
+.end
+
+.control
+run
+plot v(2) vs v(1)
+.endc

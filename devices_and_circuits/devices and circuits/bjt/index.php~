@@ -1,0 +1,13 @@
+<? require "../../../LocalSettings.php"; ?>
+<? $page_title="Circuits - WEL Virtual Labs"; $show_sidebar=1; ?>
+<? include $header; ?>
+
+<h1>BJT Amplifiers</h1>
+<ul>
+  <li> <a href="bjt_theory.pdf">Theory</a> </li> 
+  <li> Interactive Tutorial
+  <li> <a href="ce.pdf">Design of CE Amplifier</a>
+  <li> <a href="bjt_ce.pdf">Simulation Exercise</a> | <a href="bjt_scr.doc">Screenshot</a></li>
+  <li>Perform
+
+<? include $footer; ?>

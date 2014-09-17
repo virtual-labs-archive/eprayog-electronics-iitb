@@ -1,0 +1,16 @@
+RL CIRCUIT
+
+R1 1 2 10
+L1 3 0 0.8H
+Vmeas 2 3 dc 0
+R2 2 0 40
+V1 1 0 PULSE(0 10 1us 1uS 1uS 0.1S 0.2S)
+.tran 1ms 1s
+.end
+
+.control
+run
+plot i(Vmeas)
+plot v(2)
+.endc
+

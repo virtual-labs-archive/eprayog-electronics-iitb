@@ -1,0 +1,17 @@
+
+<? require "../../../LocalSettings.php"; ?>
+<? $page_title="Devices - WEL Virtual Labs"; $show_sidebar=1; ?>
+<? include $header; ?>
+
+<h1>Wave shaping circuits using diodes.</h1>
+
+<li><a href="Wave Shaping Circuits_theory.pdf">Theory</a></li>
+<li><a href="Wave Shaping Circuits_simulation.pdf">Labsheet</a></li>
+<li><a href="interactive">Interactive Tutorials on clippers</a></li>
+
+<li>Clamping Circuit: <a href="clamping_ckt.pdf">Simulation Exercise</a> | <a href="clamping_scr.doc">Screenshot</a></li>
+<li>Shunt Clipper: <a href="diode_clipper_1.pdf">Simulation Exercise</a> | <a href="shunt_scr.doc">Screenshot</a></li>
+<li>Series Clipper: <a href="diode_clipper_2.pdf">Simulation Exercise</a> | <a href="series_scr.doc">Screenshot</a></li>
+<li>Voltage Doubler: <a href="voltage_doubler.pdf">Simulation Exercise</a> | <a href="voltage_scr.doc">Screenshot</a></li>
+
+<? include $footer; ?>

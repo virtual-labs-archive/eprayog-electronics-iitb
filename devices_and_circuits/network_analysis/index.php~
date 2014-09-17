@@ -1,0 +1,21 @@
+<? require "../../LocalSettings.php"; ?>
+<? $page_title="Network Analysis - WEL Virtual Labs"; $show_sidebar=1; ?>
+<? include $header; ?>
+
+<h1>Network Analysis List of Experiments</h1>
+<ol>
+<li>Verification of Superposition theorem in A.C. circuits.</li>
+<li>Verification of Thevenin's theorem in A.C. circuits.<a href="thevenin.pdf">Simulation Exercise</a></li>
+<li>Verification of Reciprocity theorem in A.C. circuits.</li>
+<li>Verification of Millman's theorem.</li>
+<li>Mesh and node current analysis.</li>
+<li>Determination of time response of R-C circuit to a square wave input.<a href="rc.pdf">Simulation Exercise</a></li>
+<li>Determination of time response of R-L circuit to a step voltage input.</li>
+<li>Determination of time response of R-L-C series circuit to a step D.C. voltage input.<a href="rlc.pdf">Simulation Exercise</a></li>
+  <li>Determination of parameters of two port network.</li>
+  <li>Determination of resonance of R-L-C series circuit.<a href="rlc_resonance.pdf">Simulation Exercise</a></li>
+  <li>Determination of resonance of R-L-C Parallel circuit.</li>
+  <li>Study of passive filters (low pass, high pass, band pass, and band reject).</li>
+</ol>
+
+<? include $footer; ?>

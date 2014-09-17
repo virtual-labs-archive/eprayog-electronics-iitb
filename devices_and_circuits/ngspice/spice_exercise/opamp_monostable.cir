@@ -1,0 +1,49 @@
+Monostable op amp
+*
+* OPAMP MACRO MODEL, SINGLE-POLE WITH 15V OUTPUT CLAMP
+* connections:      non-inverting input
+*                   |   inverting input
+*                   |   |   output
+*                   |   |   |
+.SUBCKT OPAMP1	    1   2   6
+* INPUT IMPEDANCE
+RIN	1	2	10MEG
+* DC GAIN=100K AND POLE1=100HZ
+* UNITY GAIN = DCGAIN X POLE1 = 10MHZ
+EGAIN	3 0	1 2	100K
+RP1	3	4	100K
+CP1	4	0	0.0159UF
+* ZENER LIMITER 
+D1	4	7	DZLIM
+D2	0	7	DZLIM
+* OUTPUT BUFFER AND RESISTANCE
+EBUFFER	5 0	4 0	1
+ROUT	5	6	10
+*
+* ZENER TO LIMIT OPAMP OUTPUT SWING (+/- 15v)
+.model	DZLIM	D(Is=0.05u Rs=0.1 Bv=14.3 Ibv=0.05u)
+.ENDS
+*
+
+.MODEL IN4007 D  ( IS=76.9p RS=42.0m BV=1.00k IBV=5.00u
++ CJO=26.5p  M=0.333 N=1.45 TT=4.32u )
+
+X1 1 2 3 OPAMP1
+R1 1 0 1k
+R2 1 3 9k
+R3 2 3 8k
+R4 4 0 20k
+C1 2 0 0.1uF
+C2 5 4 0.5nF
+
+D1 2 0 IN4007
+D2 1 4 IN4007
+*V1 5 0 PWL(0 0mV 1ms 1mV 2ms 0mV)
+V1 5 0 PULSE(1V 0mV 1ms .1n .1n 5ms 20ms)
+.tran 1ms 5ms
+.end
+
+.control
+run
+plot v(3),v(5)
+.endc

@@ -1,0 +1,16 @@
+<? require "../../../LocalSettings.php"; ?>
+<? $page_title="Devices - WEL Virtual Labs"; $show_sidebar=1; ?>
+<? include $header; ?>
+
+<h1>Design and analysis of rectifiers with and without filter</h1>
+<ul>
+<li> Theory for Half Wave Rectifier</li>
+<li> <a href="halfwave.php">Half Wave Rectifier Interactive Tutorial</a></li>
+<li> Half Wave Rectifier Simulation Exercise</a></li>
+
+<li> <a href="fwr_theory.pdf">Theory for Full Wave Rectifier</a> </li>
+<li> <a href="fwr_simulation.pdf">Full Wave Rectifier Simulation Exercise</a></li>
+<li> <a href="fwr_scr.doc">Full Wave Rectifier Screenshot</a></li>
+
+</ul>
+<? include $footer; ?>

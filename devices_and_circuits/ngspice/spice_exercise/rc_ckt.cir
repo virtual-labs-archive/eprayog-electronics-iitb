@@ -1,0 +1,12 @@
+RC CIRCUIT
+
+R1 1 2 1k
+C1 2 0 1uf
+V1 1 0 PULSE(0V 1V 1NS 1NS 1NS 1.2MS 2MS)
+.tran 1m 10m
+.end
+
+.control
+  run
+  plot v(1),v(2)
+.endc

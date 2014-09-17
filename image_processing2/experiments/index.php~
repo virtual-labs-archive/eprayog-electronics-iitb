@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<?php
+include 'default_template.php';
+?>
+
+        <div id="submenu">
+        <ul>
+               <li><a href="list_expts.php">List of Experiments</a></li>
+        </ul>
+        </div>
+	<!-- end #menu -->
+	<div id="page">
+    	<div id="page-bgtop">
+     	<div id="page-bgbtm">
+      		<div id="content">
+	    		<div class="post">
+                <div class="post-bgtop">
+		    	<div class="post-bgbtm">
+                                        <h1 class="title"><a href="#">List of Experiments</a></h1>
+       				<div class="entry">
+                          <p><ol>
+                          <li>Fundamentals of digital image.</li>
+<li>Image rotation, scaling, and translation.</li>
+<li>Study of statistical properties- mean, standard deviation, profile, variance and Histogram plotting.</li>
+<li>Histogram equalization & Histogram specification.</li>
+<li>2-D convolution of image.</li>
+<li>Image enhancement using spatial filtering.</li>
+<li>Study of 2-D F.F.T of image.</li>
+<li>DCT and IDCT of image for compression.</li>
+<li>KL transform.</li>
+<li>Edge detection using various operators.</li>
+<li>Program for Thresholding.</li>
+<li>Morphological operations- erosion, dilation, opening & closing on binary image.</li>
+<li>Function for determining boundary descriptors, like boundary length and curvature</li>
+</ol>
+</p>
+     				</div>
+	     		</div>
+		      	</div>
+		       	</div>
+
+        		<div style="clear: both;">&nbsp;</div>
+		    </div>
+		<!-- end #content -->
+    	</div>
+     	</div>
+	</div>
+
+<?php
+include 'default_sidebar_footer.php';
+?>
+</body>
+</html>

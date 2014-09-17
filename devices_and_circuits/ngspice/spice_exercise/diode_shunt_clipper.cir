@@ -1,0 +1,14 @@
+SHUNT CLIPPER
+.MODEL DIO D( IS=1.8E-10 RS=2 BV=50.0 IBV=1e-4+ CJO=2e-12 M=0.333 N=2.06 TT=4.32e-9)
+
+R1 1 2 1k
+D1 2 3 DIO
+V1 1 0 sin(0 5V 1k)
+V2 0 3 dc 2V
+.tran 100us 2ms
+.end
+
+.control
+run
+plot v(1),v(2)
+.endc

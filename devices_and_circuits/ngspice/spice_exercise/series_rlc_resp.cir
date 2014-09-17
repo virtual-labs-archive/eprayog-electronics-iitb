@@ -1,0 +1,15 @@
+SERIES RLC CKT: TIME DOMAIN RESPONSE
+
+V1 1 0 PULSE(0 5 10NS 10NS 10NS 0.1S 0.2S)
+R1 2 3 20
+Vmeas 1 2 dc 0
+L1 3 4 1mH
+C1 4 0 1uf
+.tran 0.01m 2m
+.end
+
+.control
+run
+plot i(Vmeas)
+plot v(3,4)
+.endc

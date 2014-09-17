@@ -1,0 +1,49 @@
+<? require "../LocalSettings.php"; ?>
+<? $page_title="FAQ - WEL Virtual Labs"; ?>
+<? include $header; ?>
+
+<h1>Frequently Asked Questions (FAQs)</h1>
+
+<h2>Remote Lab Architecture</h2>
+<p>
+  <a href="documents/Remote_Lab_Architecture.pdf">Report on Remote Lab Architecture</a>
+</p>
+
+<h2>Webmasters</h2>
+<table>
+  <tbody>
+    <tr>
+      <th>Name</th>
+      <th>Email ID</th>
+      <th>Contact No.</th>
+    </tr>
+    <tr>
+      <td>Nagesh S Nayak</td>
+      <td>nageshsnayak[at]ee.iitb.ac.in</td>
+      <td>4412/ 4403</td>
+    </tr>
+    <tr>
+      <td>Mahesh Bhaganagare</td>
+      <td>mab[at]ee.iitb.ac.in</td>
+      <td>4412/ 4403</td>
+    </tr>
+    <tr>
+      <td>Prashant Sohani</td>
+      <td>prashants[at]ee.iitb.ac.in</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<br />
+<h2>Contact Address: </h2>
+<p>
+  Wadhwani Electronics Lab, <br />
+  3rd floor, Main Building,<br />
+  Department of Electrical Engineering,<br />
+  IIT Bombay, Powai, Mumbai-400 076. <br />
+</p>
+
+  <h4>Tel. Nos.(Off): 022-2576 4412/ 4403 </h4>
+
+
+<? include $footer; ?>

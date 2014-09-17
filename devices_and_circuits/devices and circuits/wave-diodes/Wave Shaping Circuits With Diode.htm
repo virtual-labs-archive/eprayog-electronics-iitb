@@ -1,0 +1,440 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<title>Wave Shaping Circuits With Diode</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{mso-style-link:"Body Text Indent Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Balloon Text Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";}
+span.MsoPlaceholderText
+	{color:gray;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-link:"Balloon Text";
+	font-family:"Tahoma","sans-serif";}
+span.BodyTextIndentChar
+	{mso-style-name:"Body Text Indent Char";
+	mso-style-link:"Body Text Indent";}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+<div class=Section1>
+
+<p class=MsoNormal align=center style='text-align:center'>Wave Shaping Circuits
+with Diodes</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:150%'><b>Aim:</b> To study clipping and
+clamping circuits.</p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><b>Background:</b>  Clipping
+circuits allow that portion of the input waveform which lies above or below
+some reference voltage level. Broadly, clippers are classified into two categories:
+</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%'>a)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Shunt clipper </p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%'>b)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Series clippers</p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><b>Shunt
+clipper:</b> The shunt clippers are the circuits in which the diode is
+connected across the load. The operation of the shunt clipper shown in Fig. 1(a)
+can be well understood using piecewise linear approximation model.</p>
+
+<p class=MsoNormal style='line-height:150%'><img width=233 height=132
+id="Picture 5" src="Wave%20Shaping%20Circuits%20With%20Diode_files/image001.jpg"></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt;line-height:
+150%'><b>Figure 1(a)</b></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'>            In Fig.
+1 (a), the cathode of the diode D is held at +V<sub>R</sub>. Hence, for the
+diode to conduct, the input signal has to be greater than V<sub>R</sub>+
+V&#947;, where V&#947; is the cut-in voltage of the diode. <img width=246
+height=151 id="Picture 1"
+src="Wave%20Shaping%20Circuits%20With%20Diode_files/image002.jpg"></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt;line-height:
+150%'><b>Figure 1(b)</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:36.0pt;line-height:
+150%'>Replacing the diode by its equivalent circuit shown in fig. 1(b) and
+applying KVL, we get</p>
+
+<p class=MsoNormal style='text-indent:36.0pt;line-height:150%'>V<sub>i </sub>=
+i.R+ V<sub>o </sub>                           ------------------------------------------
+       (1)</p>
+
+<p class=MsoNormal style='text-indent:36.0pt;line-height:150%'>V<sub>i </sub>=
+i.R + i.R<sub>f</sub>. +V&#947; + V<sub>R          -----------------------------------------------------------------</sub>
+          (2)</p>
+
+<p class=MsoNormal style='text-indent:36.0pt;line-height:150%'>    i= <span
+style='position:relative;top:10.0pt'><img width=58 height=32
+src="Wave%20Shaping%20Circuits%20With%20Diode_files/image003.png"></span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt;line-height:150%'>This gives,</p>
+
+<p class=MsoNormal style='text-indent:36.0pt;line-height:150%'>V<sub>o</sub>=  <span
+style='position:relative;top:8.5pt'><img width=134 height=30
+src="Wave%20Shaping%20Circuits%20With%20Diode_files/image004.png"></span>+ V<sub>R</sub>
++ V&#947; ---------------------------------       (3)</p>
+
+<p class=MsoNormal style='text-indent:36.0pt;line-height:150%'>Simplifying this,
+we get,</p>
+
+<p class=MsoNormal style='text-indent:36.0pt;line-height:150%'>V<sub>o</sub> = <span
+style='position:relative;top:8.5pt'><img width=160 height=30
+src="Wave%20Shaping%20Circuits%20With%20Diode_files/image005.png"></span>  ----------------------------------------
+       (4)</p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:54.0pt;text-align:justify;
+text-indent:-36.0pt;line-height:150%'>i)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>When input signal V<sub>i</sub> is less than (V<sub>R</sub>+ V&#947;), D
+is OFF (i=0). </p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:18.0pt;text-align:justify;
+line-height:150%'>       Hence, from Eq. 1, we get V<sub>o </sub>= V<sub>i</sub>.</p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:40.5pt;text-align:justify;
+text-indent:-22.5pt;line-height:150%'>ii)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span> For the diode D to conduct, V<sub>i</sub> should be greater than V<sub>R</sub>
++ V&#947;. When the diode conducts, the output signal is given by the Eq. 4.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;line-height:150%'><img width=518
+height=383 id="Picture 2"
+src="Wave%20Shaping%20Circuits%20With%20Diode_files/image006.jpg"></p>
+
+<p class=MsoNormal style='margin-left:144.0pt;text-indent:36.0pt;line-height:
+150%'><b>Figure 1(c)</b></p>
+
+<p class=MsoNormal style='margin-left:4.5pt;text-align:justify;text-indent:
+31.5pt;line-height:150%'>The transfer characteristics can be drawn to illustrate
+both the conditions as shown in Fig. 1(c). </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:36.0pt;line-height:
+150%'>The transfer characteristics indicate an abrupt change in slope at V<sub>i</sub>=
+V<sub>R</sub>+ V&#947; (breakpoint). When the input voltage is less than (V<sub>R</sub>+
+V&#947;), diode D is OFF and V<sub>o</sub>= V<sub>in</sub>, indicated by slope
+1. When the input voltage is greater than (V<sub>R</sub>+ V&#947;) (to the
+right of the breakpoint), the characteristics is a line with slope <span
+style='position:relative;top:8.5pt'><img width=31 height=30
+src="Wave%20Shaping%20Circuits%20With%20Diode_files/image007.png"></span> given
+by the Eq. 4.</p>
+
+<p class=MsoNormal style='text-indent:36.0pt;line-height:150%'> Since R<sub>f</sub>
+&lt;&lt; R and V&#947; &lt;&lt; V<sub>R</sub>. Eq. 4 reduces to </p>
+
+<p class=MsoNormal style='text-indent:36.0pt;line-height:150%'>V<sub>o </sub>=
+V<sub>R </sub>+ V&#947;. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:36.0pt;line-height:
+150%'>Thus the output waveform is found to have “clipped off” the positive peak
+above (V<sub>R</sub>+ V&#947;). </p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'><b>Series
+clipper:</b> These are the clipping circuits in which the diode is connected in
+series with the load (see Fig. 2(a)).  </p>
+
+<p class=MsoNormal style='line-height:150%'><img width=433 height=153
+id="Picture 3" src="Wave%20Shaping%20Circuits%20With%20Diode_files/image008.jpg"></p>
+
+<p class=MsoNormal style='line-height:150%'><b>       Figure 2(a)                                           Figure
+2(b)</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:36.0pt;line-height:
+150%'>Here, the cathode of the diode is held at V<sub>R. </sub>.So, the diode
+conducts for V<sub>i  </sub>&gt; V<sub>R </sub>+ V&#947;. </p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'>Applying KVL to
+the circuit in Fig. 2(b),</p>
+
+<p class=MsoNormal style='text-indent:36.0pt;line-height:150%'>V<sub>i  </sub>=
+ i. (R<sub>f </sub>+ R) + V&#947; + V<sub>R</sub></p>
+
+<p class=MsoNormal style='line-height:150%'>            i= <span
+style='position:relative;top:10.0pt'><img width=58 height=32
+src="Wave%20Shaping%20Circuits%20With%20Diode_files/image003.png"></span> </p>
+
+<p class=MsoNormal style='text-indent:36.0pt;line-height:150%'>V<sub>o  </sub>=
+i.R + V<sub>R</sub></p>
+
+<p class=MsoNormal style='line-height:150%'><sub>                 </sub>V<sub>o
+</sub>=  <span
+style='position:relative;top:8.5pt'><img width=115 height=33
+src="Wave%20Shaping%20Circuits%20With%20Diode_files/image009.png"></span></p>
+
+<p class=MsoNormal style='line-height:150%'>             V<sub>o </sub>= <span
+style='position:relative;top:8.5pt'><img width=46 height=29
+src="Wave%20Shaping%20Circuits%20With%20Diode_files/image010.png"></span>+ <span
+style='position:relative;top:8.5pt'><img width=50 height=30
+src="Wave%20Shaping%20Circuits%20With%20Diode_files/image011.png"></span>- <span
+style='position:relative;top:8.5pt'><img width=45 height=29
+src="Wave%20Shaping%20Circuits%20With%20Diode_files/image012.png"></span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt;line-height:150%'>Since R &gt;&gt;
+R<sub>f</sub>, <span
+style='position:relative;top:8.5pt'><img width=53 height=30
+src="Wave%20Shaping%20Circuits%20With%20Diode_files/image013.png"></span>&#8776;
+0, and <span
+style='position:relative;top:8.5pt'><img width=31 height=29
+src="Wave%20Shaping%20Circuits%20With%20Diode_files/image014.png"></span> &#8776;
+1</p>
+
+<p class=MsoNormal style='text-indent:36.0pt;line-height:150%'>Hence, V<sub>o </sub>=
+V<sub>i </sub>- V&#947;.</p>
+
+<p class=MsoNormal style='text-indent:36.0pt;line-height:150%'>For  V<sub>i </sub>&lt;
+V<sub>R </sub>+ V&#947;  the diode  does not conduct (i = 0), </p>
+
+<p class=MsoNormal style='text-indent:36.0pt;line-height:150%'>Vo = V<sub>R</sub>.</p>
+
+<p class=MsoNormal style='line-height:150%'>Thus, that portion of the waveform
+is transmitted which lies above V<sub>R.</sub></p>
+
+<p class=MsoNormal style='line-height:150%'><img width=538 height=436
+src="Wave%20Shaping%20Circuits%20With%20Diode_files/image015.png"></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-indent:36.0pt;line-height:
+150%'><b>Figure 2(c)</b></p>
+
+<p class=MsoNormal style='line-height:150%'><b>Clamper Circuit</b></p>
+
+<p class=MsoNormal style='line-height:150%'><b><img width=270 height=140
+src="Wave%20Shaping%20Circuits%20With%20Diode_files/image016.jpg"></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt;line-height:
+150%'><b>Figure 3(a)</b></p>
+
+<p class=MsoNormal style='line-height:150%'><b><img width=276 height=145
+src="Wave%20Shaping%20Circuits%20With%20Diode_files/image017.jpg"></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt;line-height:
+150%'><b>Figure 3(b)</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:36.0pt;line-height:
+150%'>Clamping circuits are used to hold either positive or negative extremity
+to a reference voltage level. Fig. 3(a) shows the clamper circuit that clamps
+the positive peak at zero level. The capacitor charges to V<sub>m</sub> i.e.
+the peak value of the input signal during the first quarter positive cycle of
+the input signal. After the first positive peak, the input voltage starts
+falling. Since the capacitor has no path for discharge, it will hold +V<sub>m</sub>
+across it preventing the diode to conduct. The output voltage is then given by
+V<sub>O</sub> = V<sub>in</sub> - V<sub>m</sub>. Thus, whenever positive peak
+occurs, (V<sub>in</sub> = V<sub>m</sub>), the output is clamped to zero volts. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:36.0pt;line-height:
+150%'>In Fig. 3(b), by inserting a reference voltage between the cathode of the
+diode and common, the positive extremity is held at +V<sub>R</sub> level. In
+this case, the capacitor charges to voltage V<sub>m</sub> - V<sub>R</sub>. This
+gives rise to V<sub>O</sub> = V<sub>in</sub> – (V<sub>m</sub> - V<sub>R </sub>).
+</p>
+
+<p class=MsoNormal style='line-height:150%'><b>&nbsp;</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b>Simulation
+assignments</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b>Part
+I: Clipping Circuit 1</b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%'>(a)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>Analyse the circuit of Fig. 1(a), and plot V<sub>o</sub> versus V<sub>i</sub>
+for -5V &lt; Vi &lt; 5V. Assume the diode voltage drop to be 0.7 V when
+conducting.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%'>(b)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span>Using the result of (a), plot the waveform V<sub>o </sub>(t) versus time
+for a triangular input voltage V<sub>i </sub>(t), varying from -5V to +5V, with
+a frequency of 1 kHz. </p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%'>(c)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>Simulate the circuit and verify your answers of (a) and (b).</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;line-height:
+150%'>&nbsp;</p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b>Part
+II: Clipping Circuit 2</b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%'>(a)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>Analyse the circuit of Fig. 2(a), and plot V<sub>o</sub> versus V<sub>i</sub>
+for -5V &lt; Vi &lt; 5V. Assume the diode voltage drop to be 0.7 V when
+conducting.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%'>(b)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span>Using the result of (a), plot the waveform V<sub>o </sub>(t) versus time
+for a triangular input voltage V<sub>i </sub>(t), varying from -5V to +5V, with
+a frequency of 1 kHz. </p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%'>(c)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>Simulate the circuit and verify your answers of (a) and (b). </p>
+
+<p class=MsoNormal align=center style='margin-left:18.0pt;text-align:center;
+text-indent:18.0pt;line-height:150%'><b>&nbsp;</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b>Part
+III: Clamping Circuit</b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%'>(a)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>Analyse the circuit of Fig. 3(a), and plot V<sub>o</sub> versus V<sub>i</sub>
+for -5V &lt; Vi &lt; 5V. Assume the diode voltage drop to be 0.7 V when
+conducting.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%'>(b)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span>Using the result of (a), plot the waveform V<sub>o </sub>(t) versus time
+V<sub>i</sub> (t) </p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%'>(c)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>Plot the waveform V<sub>o </sub>(t) versus time for a sinusoidal input
+voltage V<sub>i </sub>(t), varying from -5V to +5V, with a frequency of 1 kHz. </p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%'>(d)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span>Simulate the circuit and verify your answers of (a) and (b).</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%'>(e)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>Repeat (a) – (d) for Fig. 3(b) with V<sub>R</sub>=+1V and -1V.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;line-height:
+150%'>&nbsp;</p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b>Part
+IV: Diode clipper lab sessions</b></p>
+
+<p class=MsoBodyTextIndent style='margin-left:0cm;text-align:justify;
+text-indent:0cm;line-height:150%'>(A)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Wire the circuit shown in Fig. 4. Apply a sinusoidal 1 KHz input voltage
+(16V peak to peak). Observe and sketch in your report, V<sub>out</sub> versus V<sub>in</sub>
+in the X-Y mode for (a) V<sub>S</sub> = 0V (i.e., ground), (b) V<sub>S</sub> =
++3V, (c) V<sub>S</sub> = -3V. Explain your observations. Would you make these
+measurements in the AC or DC mode? Why?</p>
+
+<p class=MsoBodyTextIndent style='margin-left:0cm;text-align:justify;
+line-height:150%'>                                                <img
+width=207 height=157 id="Picture 31"
+src="Wave%20Shaping%20Circuits%20With%20Diode_files/image018.png"></p>
+
+<p class=MsoBodyTextIndent style='margin-left:0cm;text-align:justify;
+line-height:150%'>                                                                        <b>Figure
+4</b></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-align:justify;text-indent:0cm;
+line-height:150%'>(B)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Design circuits to generate the input output characteristics given in
+Fig. 5 (a) and </p>
+
+<p class=MsoNormal style='text-align:justify;line-height:150%'>            5 (b).
+Wire the circuits and verify their operation.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;line-height:
+150%'> <img width=243 height=203 id="Picture 32"
+src="Wave%20Shaping%20Circuits%20With%20Diode_files/image019.png">      <img
+width=251 height=203 id="Picture 34"
+src="Wave%20Shaping%20Circuits%20With%20Diode_files/image020.png"></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-indent:36.0pt;line-height:
+150%'><b>Figure 5(a)                                                     Figure
+5(b)</b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;line-height:
+150%'>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

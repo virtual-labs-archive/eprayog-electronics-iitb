@@ -1,0 +1,16 @@
+<? require "../../LocalSettings.php"; ?>
+<? $page_title="Linear Integrated Circuits - WEL Virtual Labs"; $show_sidebar=1; ?>
+<? include $header; ?>
+
+  <a href="index.php">Go Back </a> | <a href="op-amp based schmitt trigger_theory.pdf">Theory</a> | <a href="schmitt_741.pdf">Simulation Exercise1</a>|<a href="schmitt_741_1.pdf">Simulation Exercise2</a> | <a href="schmitt_741_2.pdf">Simulation Exercise3</a>
+
+
+
+<h1>Design and simulate Schmitt trigger using IC 741 for given values of UTP and LTP.</h1>
+
+  <li> <a href="op-amp based schmitt trigger_theory.pdf">Theory</a></li>
+  <li> <a href="schmitt_741.pdf">Simulation Exercise1</a></li>
+  <li> <a href="schmitt_741_1.pdf">Simulation Exercise2</a></li>  
+  <li> <a href="schmitt_741_2.pdf">Simulation Exercise3</a></li>
+
+<? include $footer; ?>

@@ -1,0 +1,11 @@
+<? require "../../../LocalSettings.php"; ?>
+<? include $header; ?>
+
+<h1>I-V characteristics of P-N junction diode, zener diode, LEDs</h1>
+
+<ul>
+<li>Theory
+<li>Interactive Tutorial
+<li>Simulation Exercise
+
+<? include $footer; ?>

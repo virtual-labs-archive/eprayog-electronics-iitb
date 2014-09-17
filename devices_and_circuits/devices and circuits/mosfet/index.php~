@@ -1,0 +1,12 @@
+<? require "../../../LocalSettings.php"; ?>
+<? $page_title="Devices - WEL Virtual Labs"; $show_sidebar=1; ?>
+<? include $header; ?>
+
+<h1> Study of JFET and MOSFET characteristics.</h1>
+<ul>
+<li>Theory</li>
+<li>Interactive Tutorial</li>
+<li>Simulation Exercise</li>
+
+
+<? include $footer; ?>

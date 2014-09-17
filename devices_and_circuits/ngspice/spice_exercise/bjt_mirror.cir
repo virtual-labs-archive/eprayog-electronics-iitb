@@ -1,0 +1,18 @@
+BJT current mirror
+.model bjt npn (is=10e-16, bf=220, va=50v, cje=20p, cjc=25p)
+
+Q1 3 2 0 bjt
+Q2 6 2 0 bjt
+R1 1 2 5k
+R2 4 5 5
+vc1 1 0 dc 5V
+vc2 4 0 dc 0v
+va 2 3 dc 0v
+vb 5 6 dc 0v
+.dc vc2 0 5 .001
+.end
+
+.control
+run
+plot i(vb) i(va)
+.endc

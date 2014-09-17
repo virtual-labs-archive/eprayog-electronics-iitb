@@ -1,0 +1,18 @@
+Bass Equalizer
+
+.include UA741.301
+
+X1 0 1 2 3 4 UA741
+R3 6 1 11k
+R1 8 7 11k
+R2 5 4 11k
+Ra 7 6 75k
+Rb 6 5 25k
+C1 7 5 22nF
+V1 8 0 dc 0 ac 10mV
+.ac dec 10 1 10MEG
+.control
+run
+plot db(v(4)/v(8))
+.endc
+.end

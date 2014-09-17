@@ -1,0 +1,14 @@
+<? $DocumentRoot="./"; ?>
+<? require "./LocalSettings.php"; ?>
+<? $page_title="WEL Virtual Labs"; $show_sidebar=1; ?>
+<? include $header; ?>
+
+<h1>SEQUEL</h1>
+<p>
+  SEQUEL is a circuit simulator developed at IIT Bombay. A graphical interface has been provided so that entering the circuit diagram and viewing of results become easy for the user. The entire package is available for free download. Several workshops have been conducted on SEQUEL in which students and teachers learn about circuit simulation, how to use the GUI, and simulate several interfacing circuits with SEQUEL. A few colleges are now using the package to supplement class-room teaching.
+</p>
+<p> 
+  <a href="http://www.ee.iitb.ac.in/~sequel" target=_blank>Link to download SEQUEL</a>
+</p>
+
+<? include $footer; ?>
