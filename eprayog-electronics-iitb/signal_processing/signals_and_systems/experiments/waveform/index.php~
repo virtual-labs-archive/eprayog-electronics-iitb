@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<?php
+     include 'default_template.php';
+?>
+
+<div id="wrapper">
+	<div id="page">
+	<div id="page-bgtop">
+	<div id="page-bgbtm">
+		<div id="content">
+			<div class="post">
+			<div class="post-bgtop">
+			<div class="post-bgbtm">
+			  <h1 class="title"><a href="#">Waveform Generation</a></h1>
+				<div class="entry">
+				<ul>
+					<li> <a href="pre.htm" target="_blank"/>Pre-session Test</a></li>
+					<li> <a href="procedure.htm" target="_blank"/>Procedure</a></li>
+					<li> <a href="post.htm" target="_blank"/>Post-Session Work</a></li>
+					<li> Related links and content:
+						<ul>
+							<li>
+								<a href="waveform generation.zip" target="_blank"/>Source Files For the Experiment</a>
+							</li>
+						</ul>
+					</li> 
+				</ul>
+				</div>
+			</div>
+			</div>
+			</div>
+			
+		<div style="clear: both;">&nbsp;</div>
+		</div>
+		<!-- end #content -->
+	</div>
+	</div>
+	</div>
+	<!-- end #page -->
+<?php
+include 'default_sidebar_footer.php';
+?>
+
+</div>
+</body>
+</html>

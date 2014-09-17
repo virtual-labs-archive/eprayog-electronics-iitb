@@ -1,0 +1,9 @@
+<?
+   require "../LocalSettings.php";
+   include "../dsp/boards/dsk6713/include.php";
+
+   session_destroy();
+   header("Location: ".$URLRoot);
+   exit();
+   
+   ?>

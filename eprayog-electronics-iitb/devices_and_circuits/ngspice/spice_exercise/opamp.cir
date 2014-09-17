@@ -1,0 +1,12 @@
+Basic operation of inverting op amp using voltage dependent voltage source
+v1 2 0 sin(0 1V 1khz)
+e 3 0 0 1 999k
+r1 3 1 3.29k
+r2 1 2 1.18k
+.tran .5ms 3ms
+.control
+run
+plot v(2),v(3)
+.endc
+.end
+

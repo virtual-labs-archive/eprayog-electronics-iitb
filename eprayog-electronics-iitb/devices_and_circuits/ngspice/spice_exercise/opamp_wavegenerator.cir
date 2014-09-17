@@ -1,0 +1,44 @@
+*OPAMP TRIANGLE GENERATOR
+.model	DZ1	D(Is=0.05u Rs=0.1 Bv=4.3 Ibv=0.05u)
+* OPAMP MACRO MODEL, SINGLE-POLE WITH 15V OUTPUT CLAMP
+* connections:      non-inverting input
+*                   |   inverting input
+*                   |   |   output
+*                   |   |   |
+.SUBCKT OPAMP1	    1   2   6
+* INPUT IMPEDANCE
+RIN	1	2	10MEG
+* DC GAIN=100K AND POLE1=100HZ
+* UNITY GAIN = DCGAIN X POLE1 = 10MHZ
+EGAIN	3 0	1 2	100K
+RP1	3	4	100K
+CP1	4	0	0.0159UF
+* ZENER LIMITER 
+D1	4	7	DZLIM
+D2	0	7	DZLIM
+* OUTPUT BUFFER AND RESISTANCE
+EBUFFER	5 0	4 0	1
+ROUT	5	6	10
+*
+* ZENER TO LIMIT OPAMP OUTPUT SWING (+/- 15v)
+.model	DZLIM	D(Is=0.05u Rs=0.1 Bv=14.3 Ibv=0.05u)
+.ENDS
+
+RI 1 2 12.5K
+CI 3 2 0.001UF IC=0.1
+X1 0 2 3 OPAMP1
+R1 3 4 20K
+R2 4 1 10K
+X2 4 5 6 OPAMP1
+RLIM 6 1 1000
+D1 1 7 DZ1
+D2 0 7 DZ1
+VREF 5 0 0V
+.TRAN 	0.5US 300US UIC
+.end
+
+.control
+run
+plot	V(3) V(1)
+.endc
+

@@ -1,0 +1,22 @@
+<? require "../LocalSettings.php"; ?>
+<? $page_title="Login - WEL Virtual Labs";  ?> 
+<?
+if(isset($_SESSION['username'])){
+  header("Location: http://localhost/");
+  exit();
+}
+?>
+
+<? include $header; ?>
+
+<div width="40%" style="text-align:center;">
+  <h3>You'll need to login to view this page...</h3>
+  <form action="/user/login.php" method="post">
+    Username <input type="text" name="username" /><br />
+    Password <input type="password" name="password" /><br />
+    <input type="submit" name="submit" value="Login" />
+  </form>
+  New users may <a href="/user/signup.php">signup</a>.
+</div>
+
+<? include $footer; ?>

@@ -1,0 +1,15 @@
+<? require "../../../LocalSettings.php"; ?>
+
+<? include $header; ?>
+
+<a href="index.php">Go Back</a> | <a href="current mirror theory.pdf">Theory</a> | <a href="current_mirror_simulation1.pdf">Simulation Exercise 1</a> | <a href="current_mirror_simulation2.pdf"> Simulation Exercise 2</a>|<a href="bjt_mirror_1.pdf"> Simulation Exercise 3</a> | <a href="bjt_mirror_2.pdf"> Simulation Exercise 4</a>
+
+<h1>Current Mirror circuits using BJT</h1>
+<ul>
+  <li> <a href="current mirror theory.pdf">Theory</a> </li> 
+  <li> <a href="current_mirror_simulation1.pdf">Simulation Exercise 1</a> </li>
+  <li><a href="current_mirror_simulation2.pdf"> Simulation Exercise 2</a></li>
+  <li><a href="bjt_mirror_1.pdf"> Simulation Exercise 3</a></li>
+  <li><a href="bjt_mirror_2.pdf"> Simulation Exercise 4</a></li>
+
+<? include $footer; ?>

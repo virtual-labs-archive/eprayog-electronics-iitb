@@ -1,0 +1,64 @@
+<? require "../../../../LocalSettings.php"; ?>
+<? $page_title="DSK6713"; $show_sidebar=1; ?>
+
+<? include $header; ?>
+
+<h1>Prerequisites for this Lab</h1>
+	 <p> 
+	  <ol>
+	    <li>Basics of C programming language. </li>
+	    <li>Basics of Scilab <a href="<?=$sns; ?>scilab">(Link to 
+Scilab tutorial)</a></li>
+		<li>Digital Signal processor <a href="dsk6713_references.php">(Link to DSP tutorial)</a></li>
+	  </ol></p>
+
+<p>
+
+<h1>List of experiments</h1>
+<ol>
+<li>IIR Filter <a href="expt1"> Basics </a>
+<ol>
+<li>Butterworth Filter: <a href="iir_butterworth/theory.pdf">Theory</a> | <a href="iir_butterworth/labsheet.pdf">Manual</a> | <a href="iir_butterworth/pre.pdf">Pre-lab quiz</a> | <a href="iir_butterworth/code.c">C code</a> | <a href="iir_butterworth/bin.out">.out file</a> | <a href="iir_butterworth/code.sce">Scilab code</a> | <a href="../RemoteLab.php">Perform</a> | <a href="iir_butterworth/post.pdf">Post-lab exercises</a></li>
+<li>Chebyshev Filter: <a href="iir_chebyshev/theory.pdf">Theory</a> | <a href="iir_chebyshev/labsheet.pdf">Manual</a> | 
+<a href="iir_chebyshev/pre.pdf">Pre-lab quiz</a> | <a href="iir_chebyshev/code.c">C code</a> | <a 
+href="iir_chebyshev/bin.out">.out file</a> | <a href="iir_chebyshev/code.sce">Scilab code</a> | <a 
+href="../RemoteLab.php">Perform</a> | <a href="iir_chebyshev/post.pdf">Post-lab exercises</a></li>
+</ol> 
+<li>FIR Filter using Windowing Techniques: <a href="expt2"> Basics </a> 
+<ol>
+<li>Rectangular Window: <a href="fir_rect/theory.pdf">Theory</a> | <a href="fir_rect/labsheet.pdf">Manual</a> | <a 
+href="fir_rect/pre_lab.pdf">Pre-lab quiz</a> | <a href="fir_rect/rect_hpf.c">C code</a> | <a href="fir_rect/rect_hpf.out">.out file</a> | 
+<a href="fir_rect/FIRFilterRecDesign.sce">Scilab code</a> | <a href="../RemoteLab.php">Perform</a> | <a 
+href="fir_rect/post_lab.pdf">Post-lab exercises</a></li>
+<li>Kaiser Window:  <a href="fir_kaiser/theory.pdf">Theory</a> | <a href="fir_kaiser/labsheet.pdf">Manual</a> | <a 
+href="fir_kaiser/pre_lab.pdf">Pre-lab quiz</a> | <a href="fir_kaiser/bpf_kaiser.c">C code</a> | <a href="fir_kaiser/bpf_kaiser.out">.out 
+file</a> 
+| <a href="fir_kaiser/FIRFilterKaiserDesign.sce">Scilab code</a> | <a href="../RemoteLab.php">Perform</a> | <a 
+href="fir_kaiser/post_lab.pdf">Post-lab 
+exercises</a></li>
+<li>Hanning Window:  <a href="fir_hanning/theory.pdf">Theory</a> | <a href="fir_hanning/labsheet.pdf">Manual</a> | <a 
+href="fir_hanning/pre_lab.pdf">Pre-lab quiz</a> | <a href="fir_hanning/hanning.c">C code</a> | <a href="fir_hanning/hanning.out">.out file</a> 
+| <a href="fir_hanning/FIRFilterHannDesign.sce">Scilab code</a> | <a href="../RemoteLab.php">Perform</a> | <a href="fir_hanning/post_lab.pdf">Post-lab 
+exercises</a></li>
+</ol>
+<li>Sine Wave Generation: <a href="sine/SINE WAVE.pdf">Theory</a> | <a href="sine/sine_wave_labsheet.pdf">Manual</a> | <a 
+href="sine/prelab questions.pdf">Pre-lab quiz</a> | <a href="sine/sine_c.zip">C code</a> | <a href="sine/sine_out.zip">.out 
+file</a> | <a href="sine/sine.sce">Scilab code</a> | <a href="../RemoteLab.php">Perform</a> | <a 
+href="sine/Exercises.pdf">Post-lab exercises</a></li>
+</ol>
+
+<h1>Steps to perform experiments remotely</h2>
+<ol>
+<li>
+Use Code Composer Studio to generate the .out file for your Code. 
+<li>Login to the system. The link to perform the experiment remotely 
+will be visible if the user has logged in.
+<li>Upload the .out file. A reference <a href="list">.out file</a> will 
+be 
+provided.
+<li>Once the file is uploaded, the user ca control various buttons on 
+the DSO and Function Generator. Verify whether the code is correct by 
+checking the frequeny response.
+</p>
+
+<? include $footer; ?>

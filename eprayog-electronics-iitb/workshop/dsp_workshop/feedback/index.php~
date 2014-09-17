@@ -1,0 +1,12 @@
+<? require "../../../LocalSettings.php"; ?>
+<? $page_title="DSP Workshop"; $show_sidebar=1; ?>
+<? include $header; ?>
+
+<h2>Feedback from DSP Workshop:</h2>
+<h3>Following are scanned copies of select Feedback forms that were collected during the workshop:</h3>
+
+<a href="1.pdf"></a>Feedback 1<br />
+<a href="2.pdf"></a>Feedback 2<br />
+<a href="3.pdf"></a>Feehback 3<br />
+
+<? include $footer; ?>

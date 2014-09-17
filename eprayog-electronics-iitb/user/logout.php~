@@ -1,0 +1,64 @@
+<?php
+
+// VC33 Code  
+
+session_start();
+$sessionNo=$_SESSION['var'];
+
+// 6713 Code
+   include("../dsp/boards/dsk6713/include.php");
+   if(isset($_SESSION['username']))
+   {
+    EndServerIp($_SESSION['username']);
+   }
+
+//$sessionNo=$_COOKIE["TestCookie"];
+$xmlDoc = new DOMDocument();
+$xmlDoc->load("../dsp/boards/vc33/status.xml");
+
+$x = $xmlDoc->documentElement;
+$sessionFound=0;
+$statusUpdated=0;
+  foreach ($x->childNodes AS $item)
+  {
+    switch($item->nodeName)
+    {
+      case "no":
+      $no=$item->nodeValue;
+      if($no==$sessionNo)
+        $sessionFound=1; 
+      break;
+      case "ip":
+      break;
+      case "port":
+      break;
+      case "status":
+      if($sessionFound==1){
+        $item->nodeValue=0;
+        $statusUpdated=1;
+        break;
+      } 
+    }
+    if($statusUpdated==1)
+      break;
+  }
+$xmlDoc->save("../dsp/boards/vc33/status.xml");
+if($statusUpdated=0)
+   exit("Error in ending session");
+setcookie ("TestCookie", "", time() - 3600,"/");   
+session_destroy();
+
+
+require "../LocalSettings.php";
+ $page_title="Virtual Labs"; $show_sidebar=1;
+
+
+
+   header("Location: ../index.php");
+  // header("Location: ".$URLRoot);
+   exit();
+   
+   ?>
+
+
+

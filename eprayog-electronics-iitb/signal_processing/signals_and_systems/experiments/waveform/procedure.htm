@@ -1,0 +1,494 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="Waveform%20generation_files/filelist.xml">
+<link rel=Edit-Time-Data href="Waveform%20generation_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>EXPERIMENT 2: WAVEFORM GENERATION</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Narendra</o:Author>
+  <o:LastAuthor>wel-03</o:LastAuthor>
+  <o:Revision>8</o:Revision>
+  <o:TotalTime>6</o:TotalTime>
+  <o:Created>2010-10-20T10:30:00Z</o:Created>
+  <o:LastSaved>2010-10-20T10:38:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>177</o:Words>
+  <o:Characters>1013</o:Characters>
+  <o:Company>Microsoft</o:Company>
+  <o:Lines>8</o:Lines>
+  <o:Paragraphs>2</o:Paragraphs>
+  <o:CharactersWithSpaces>1188</o:CharactersWithSpaces>
+  <o:Version>10.2625</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:PunctuationKerning/>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:1627421319 -2147483648 8 0 66047 0;}
+@font-face
+	{font-family:Calibri;
+	mso-font-alt:Arial;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-520092929 1073786111 9 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:Calibri;
+	mso-fareast-font-family:Calibri;
+	mso-bidi-font-family:"Times New Roman";}
+p.ListParagraph, li.ListParagraph, div.ListParagraph
+	{mso-style-name:"List Paragraph";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:Calibri;
+	mso-fareast-font-family:Calibri;
+	mso-bidi-font-family:"Times New Roman";}
+p.ListParagraphCxSpFirst, li.ListParagraphCxSpFirst, div.ListParagraphCxSpFirst
+	{mso-style-name:"List ParagraphCxSpFirst";
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:Calibri;
+	mso-fareast-font-family:Calibri;
+	mso-bidi-font-family:"Times New Roman";}
+p.ListParagraphCxSpMiddle, li.ListParagraphCxSpMiddle, div.ListParagraphCxSpMiddle
+	{mso-style-name:"List ParagraphCxSpMiddle";
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:Calibri;
+	mso-fareast-font-family:Calibri;
+	mso-bidi-font-family:"Times New Roman";}
+p.ListParagraphCxSpLast, li.ListParagraphCxSpLast, div.ListParagraphCxSpLast
+	{mso-style-name:"List ParagraphCxSpLast";
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:Calibri;
+	mso-fareast-font-family:Calibri;
+	mso-bidi-font-family:"Times New Roman";}
+p.msonormalcxspmiddle, li.msonormalcxspmiddle, div.msonormalcxspmiddle
+	{mso-style-name:msonormalcxspmiddle;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.msonormalcxsplast, li.msonormalcxsplast, div.msonormalcxsplast
+	{mso-style-name:msonormalcxsplast;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.msonormalcxspmiddlecxspmiddle, li.msonormalcxspmiddlecxspmiddle, div.msonormalcxspmiddlecxspmiddle
+	{mso-style-name:msonormalcxspmiddlecxspmiddle;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.msonormalcxspmiddlecxsplast, li.msonormalcxspmiddlecxsplast, div.msonormalcxspmiddlecxsplast
+	{mso-style-name:msonormalcxspmiddlecxsplast;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+span.Char
+	{mso-style-name:Char;
+	mso-style-noshow:yes;
+	mso-style-link:"Balloon Text";
+	mso-ansi-font-size:8.0pt;
+	mso-bidi-font-size:8.0pt;
+	font-family:Tahoma;
+	mso-ascii-font-family:Tahoma;
+	mso-hansi-font-family:Tahoma;
+	mso-bidi-font-family:Tahoma;}
+p.msonormalcxspmiddlecxspmiddlecxspmiddle, li.msonormalcxspmiddlecxspmiddlecxspmiddle, div.msonormalcxspmiddlecxspmiddlecxspmiddle
+	{mso-style-name:msonormalcxspmiddlecxspmiddlecxspmiddle;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.msonormalcxspmiddlecxspmiddlecxsplast, li.msonormalcxspmiddlecxspmiddlecxsplast, div.msonormalcxspmiddlecxspmiddlecxsplast
+	{mso-style-name:msonormalcxspmiddlecxspmiddlecxsplast;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:1437478111;
+	mso-list-type:hybrid;
+	mso-list-template-ids:663670590 1074331649 1074331651 1074331653 1074331649 1074331651 1074331653 1074331649 1074331651 1074331653;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:74.05pt;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="9218"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p class=MsoNormal align=center style='text-align:center;tab-stops:141.0pt center 225.65pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt;line-height:
+115%'>EXPERIMENT 2: WAVEFORM GENERATION<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:16.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Objective</b>: To
+generate sinusoidal, triangular and square waves using Scilab.</p>
+
+<p class=msonormalcxspmiddle style='margin-left:.75in;mso-add-space:auto'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Procedure</b>: </p>
+
+<p class=ListParagraph style='margin-left:21.3pt;mso-add-space:auto'><span
+style='mso-spacerun:yes'> </span>Log on to the system. Book a slot. Answer all
+the questions in the pre session test. If all the answers are correct, a link will
+be activated to access the system.</p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:21.3pt;mso-add-space:auto;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormalcxspmiddle style='margin-left:21.3pt;mso-add-space:auto'>Once
+the link is active,</p>
+
+<p class=msonormalcxspmiddlecxspmiddle style='margin-left:21.3pt;mso-add-space:
+auto'><o:p>&nbsp;</o:p></p>
+
+<p class=msonormalcxspmiddlecxspmiddlecxspmiddle style='margin-left:35.45pt;
+mso-add-space:auto;text-indent:-.25in;mso-list:l0 level1 lfo2'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Load the sine.sce file in Scilab.</p>
+
+<p class=msonormalcxspmiddlecxspmiddlecxsplast style='margin-left:35.45pt;
+mso-add-space:auto;text-indent:-.25in;mso-list:l0 level1 lfo2'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Go to Execute-&gt;Load into Scilab or press
+Ctrl-L</p>
+
+<p class=msonormalcxspmiddlecxsplast style='margin-left:35.45pt;mso-add-space:
+auto;text-indent:-.25in;mso-list:l0 level1 lfo2'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Enter the amplitude of the sine wave which needs
+to be produced.</p>
+
+<p class=MsoNormal>E.g.:</p>
+
+<p class=MsoNormal>Enter the amplitude of the sine wave<span
+style='mso-spacerun:yes'>   </span>2 (Enter the desired amplitude here)</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'> </span>A = 2 </p>
+
+<p class=MsoNormal>A should print the value of the amplitude requested by the
+user.</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'> </span></p>
+
+<p class=ListParagraph style='margin-left:35.45pt;mso-add-space:auto;
+text-indent:-.25in;mso-list:l0 level1 lfo2'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>A graphical representation of the sine wave
+appears on the plot window.</p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:35.45pt;mso-add-space:auto;line-height:normal'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="Picture_x0020_2" o:spid="_x0000_s1026" type="#_x0000_t75"
+ style='position:absolute;left:0;text-align:left;margin-left:0;margin-top:0;
+ width:320.25pt;height:241.5pt;z-index:1;visibility:visible;
+ mso-position-horizontal:left;mso-position-vertical:top'>
+ <v:imagedata src="Waveform%20generation_files/image005.emz" o:title=""/>
+ <w:wrap type="square"/>
+</v:shape><![endif]--><![if !vml]><img width=427 height=322
+src="Waveform%20generation_files/image002.gif" align=left hspace=12 v:shapes="Picture_x0020_2"><![endif]><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman"'><br clear=all style='mso-special-character:line-break'>
+<o:p></o:p></span></p>
+
+<p class=msonormalcxspmiddle style='margin-left:35.45pt;mso-add-space:auto'><o:p>&nbsp;</o:p></p>
+
+<p class=msonormalcxspmiddlecxspmiddle style='margin-left:35.45pt;mso-add-space:
+auto;text-indent:-.25in;mso-list:l0 level1 lfo2'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Next, load the square.sce file in Scilab.</p>
+
+<p class=msonormalcxspmiddlecxspmiddlecxsplast style='margin-left:35.45pt;
+mso-add-space:auto;text-indent:-.25in;mso-list:l0 level1 lfo2'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Execute the code.</p>
+
+<p class=msonormalcxspmiddlecxsplast style='margin-left:35.45pt;mso-add-space:
+auto;text-indent:-.25in;mso-list:l0 level1 lfo2'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Enter the desired amplitude for the square wave.</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:56.05pt;margin-bottom:.0001pt;text-indent:-34.75pt'>E.g.:</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:56.05pt;margin-bottom:.0001pt;text-indent:-34.75pt'>Enter the
+amplitude of the square wave<span style='mso-spacerun:yes'>   </span>2 (Enter
+the desired amplitude here)</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:56.05pt;margin-bottom:.0001pt;text-indent:-34.75pt'><span
+style='mso-spacerun:yes'> </span>A = 2 </p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:56.05pt;margin-bottom:.0001pt;text-indent:-34.75pt'>A should print
+the value of the amplitude requested by the user.</p>
+
+<p class=ListParagraph style='margin-left:35.45pt;mso-add-space:auto;
+text-indent:-.25in;mso-list:l0 level1 lfo2'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>A plot of square wave appears on the plot
+window.</p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:35.45pt;mso-add-space:auto;text-indent:-.25in;line-height:normal;
+mso-list:l0 level1 lfo2'><![if !supportLists]><span style='font-size:12.0pt;
+font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman"'>Rotate the waveform to get a good
+representation of the square wave.<o:p></o:p></span></p>
+
+<p class=msonormalcxspmiddle style='margin-left:35.45pt;mso-add-space:auto'><o:p>&nbsp;</o:p></p>
+
+<p class=msonormalcxspmiddlecxspmiddle style='margin-left:35.45pt;mso-add-space:
+auto'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_3"
+ o:spid="_x0000_i1025" type="#_x0000_t75" style='width:319.5pt;height:240.75pt;
+ visibility:visible'>
+ <v:imagedata src="Waveform%20generation_files/image006.emz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=426 height=321
+src="Waveform%20generation_files/image004.gif" v:shapes="Picture_x0020_3"><![endif]></span></p>
+
+<p class=msonormalcxspmiddlecxspmiddlecxspmiddleCxSpFirst style='margin-left:
+35.45pt;mso-add-space:auto'><o:p>&nbsp;</o:p></p>
+
+<p class=msonormalcxspmiddlecxspmiddlecxspmiddleCxSpMiddle style='margin-left:
+35.45pt;mso-add-space:auto'><o:p>&nbsp;</o:p></p>
+
+<p class=msonormalcxspmiddlecxspmiddlecxspmiddleCxSpLast style='margin-left:
+35.45pt;mso-add-space:auto'><o:p>&nbsp;</o:p></p>
+
+<p class=msonormalcxspmiddlecxspmiddlecxsplast style='margin-left:35.45pt;
+mso-add-space:auto;text-indent:-.25in;mso-list:l0 level1 lfo2'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Repeat the procedure with triangle.sce.</p>
+
+<p class=msonormalcxspmiddlecxsplast style='margin-left:35.45pt;mso-add-space:
+auto;text-indent:-.25in;mso-list:l0 level1 lfo2'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>You will get a triangular wave on the graphic
+window.</p>
+
+<p class=msonormalcxspmiddle style='margin-left:35.45pt;mso-add-space:auto'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='mso-bidi-font-family:Calibri'><span style='mso-spacerun:yes'> </span></span></b><span
+style='mso-bidi-font-family:Calibri'><span style='mso-spacerun:yes'> </span></span><o:p></o:p></p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_4" o:spid="_x0000_i1026" type="#_x0000_t75" style='width:333.75pt;
+ height:252pt;visibility:visible'>
+ <v:imagedata src="Waveform%20generation_files/image007.emz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=445 height=336
+src="Waveform%20generation_files/image008.gif" v:shapes="Picture_x0020_4"><![endif]></span><o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=msonormalcxspmiddlecxsplast style='margin-left:17.45pt;mso-add-space:
+auto'><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>

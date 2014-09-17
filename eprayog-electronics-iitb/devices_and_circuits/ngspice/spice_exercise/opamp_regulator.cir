@@ -1,0 +1,40 @@
+* VOLTAGE REGULATOR USING OP AMP 
+.model	QNOM	NPN(BF=100)
+.model	D1N746	D(Is=5u Rs=14 Bv=2.81 Ibv=5u)
+
+* * OPAMP MACRO MODEL, SINGLE-POLE 
+* connections:      non-inverting input
+*                   |   inverting input
+*                   |   |   output
+*                   |   |   |
+.SUBCKT OPAMP1      1   2   6
+* INPUT IMPEDANCE
+RIN	1	2	10MEG
+* GAIN BANDWIDTH PRODUCT = 10MHZ
+* DC GAIN (100K) AND POLE 1 (100HZ)
+EGAIN	3 0	1 2	100K
+RP1	3	4	1K
+CP1	4	0	1.5915UF
+* OUTPUT BUFFER AND RESISTANCE
+EBUFFER	5 0	4 0	1
+ROUT	5	6	10
+.ENDS
+*
+* 
+
+VIN 1 0 DC 15
+Q1 1 3 2 QNOM
+R 1 4 5K
+D1 0 4 D1N746
+X1 4 5 3 OPAMP1
+R1 2 5 10K
+R2 5 0 5K
+RL 2 0 100
+.dc VIN 13 16 1
+.end
+
+.control
+run
+print v(2)
+plot   V(2),v(1)
+.endc

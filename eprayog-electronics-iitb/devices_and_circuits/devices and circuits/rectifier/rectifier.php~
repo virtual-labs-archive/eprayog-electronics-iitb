@@ -1,0 +1,14 @@
+<? require "../../LocalSettings.php"; ?>
+<? $page_title="Devices - WEL Virtual Labs"; $show_sidebar=1; ?>
+<? include $header; ?>
+
+<a href= "index.php"> Home </a> | <a href="../diode-BJT.php">Class notes on diode and BJT</a> | <a href="../OP-AMP.php">Class Notes on OP-AMP</a>
+
+<h2>Design and analysis of rectifiers with and without filter</h2>
+
+<li> <a href="fwr_theory.pdf">Theory for FWR</a> </li>
+<li> <a href="fwr_simulation.pdf">Simulation Exercise1</a></li>
+<li> <a href="rectifier_tap_1.pdf">Simulation Exercise2</a></li>
+
+
+<? include $footer; ?>

@@ -1,0 +1,18 @@
+VOLTAGE DOUBLER
+
+*.MODEL DIO D( IS=1.8E-14 RS=2 BV=50.0 IBV=1e-4
++ CJO=2e-12  M=0.333 N=2.06 TT=4.32e-9)
+
+C1 1 2 1uf
+D1 0 2 DIO
+D2 2 3 DIO
+C2 3 0 1uf
+*R1 3 0 10MEG
+v1 1 0 sin(0 10V 1k)
+.tran 0.01m 50m
+.end
+
+.control
+run
+plot v(1) v(3)
+.endc

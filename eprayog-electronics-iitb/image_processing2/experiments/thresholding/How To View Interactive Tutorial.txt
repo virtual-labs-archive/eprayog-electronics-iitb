@@ -1,0 +1,10 @@
+
+HOW TO VIEW THE INTERACTIVE TUTORIAL :
+
+There are few more files in this folder excluding this ".txt", one is ".html" and others are ".class" files. 
+It also contains one folder named "image".
+For viewing the interactive tutorial, one has to keep all files & folder in same folder and then open the ".html" file in a java enabled browser.
+
+
+
+@ Virtual Labs(Electronics), IIT Bombay

@@ -1,0 +1,12 @@
+<? require "../../LocalSettings.php"; ?>
+<? $page_title="DSP Workshop"; $show_sidebar=1; ?>
+<? include $header; ?>
+
+<h2>DSP Workshop</h2>
+<h3>13-14 December 2010</h3>
+<a href="DSP-wkshop-WEL.pdf">Workshop Material</a><br />
+<a href="belur_virtual_labs.pdf">Slides by Prof. M Belur</a><br />
+
+
+
+<? include $footer; ?>

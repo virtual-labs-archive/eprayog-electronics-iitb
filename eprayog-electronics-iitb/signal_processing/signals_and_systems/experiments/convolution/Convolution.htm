@@ -1,0 +1,734 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="Convolution_files/filelist.xml">
+<link rel=Edit-Time-Data href="Convolution_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>EXPERIMENT 1: DISCRETE TIME CONVOLUTION</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Narendra</o:Author>
+  <o:LastAuthor>WEL</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>7</o:TotalTime>
+  <o:Created>2010-09-30T11:40:00Z</o:Created>
+  <o:LastSaved>2010-09-30T11:40:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>428</o:Words>
+  <o:Characters>2441</o:Characters>
+  <o:Company>Microsoft</o:Company>
+  <o:Lines>20</o:Lines>
+  <o:Paragraphs>5</o:Paragraphs>
+  <o:CharactersWithSpaces>2864</o:CharactersWithSpaces>
+  <o:Version>10.2625</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:PunctuationKerning/>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:1627421319 -2147483648 8 0 66047 0;}
+@font-face
+	{font-family:Calibri;
+	mso-font-alt:Arial;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-520092929 1073786111 9 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:Calibri;
+	mso-fareast-font-family:Calibri;
+	mso-bidi-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.ListParagraph, li.ListParagraph, div.ListParagraph
+	{mso-style-name:"List Paragraph";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:Calibri;
+	mso-fareast-font-family:Calibri;
+	mso-bidi-font-family:"Times New Roman";}
+p.ListParagraphCxSpFirst, li.ListParagraphCxSpFirst, div.ListParagraphCxSpFirst
+	{mso-style-name:"List ParagraphCxSpFirst";
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:Calibri;
+	mso-fareast-font-family:Calibri;
+	mso-bidi-font-family:"Times New Roman";}
+p.ListParagraphCxSpMiddle, li.ListParagraphCxSpMiddle, div.ListParagraphCxSpMiddle
+	{mso-style-name:"List ParagraphCxSpMiddle";
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:Calibri;
+	mso-fareast-font-family:Calibri;
+	mso-bidi-font-family:"Times New Roman";}
+p.ListParagraphCxSpLast, li.ListParagraphCxSpLast, div.ListParagraphCxSpLast
+	{mso-style-name:"List ParagraphCxSpLast";
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:Calibri;
+	mso-fareast-font-family:Calibri;
+	mso-bidi-font-family:"Times New Roman";}
+span.Char
+	{mso-style-name:" Char";
+	mso-style-noshow:yes;
+	mso-style-link:"Balloon Text";
+	mso-ansi-font-size:8.0pt;
+	mso-bidi-font-size:8.0pt;
+	font-family:Tahoma;
+	mso-ascii-font-family:Tahoma;
+	mso-hansi-font-family:Tahoma;
+	mso-bidi-font-family:Tahoma;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:187764503;
+	mso-list-type:hybrid;
+	mso-list-template-ids:3409276 -1340837770 1074331673 1074331675 1074331663 1074331673 1074331675 1074331663 1074331673 1074331675;}
+@list l0:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:39.3pt;
+	text-indent:-.25in;}
+@list l0:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:75.3pt;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:944774514;
+	mso-list-type:hybrid;
+	mso-list-template-ids:188663226 727058430 1074331673 1074331675 1074331663 1074331673 1074331675 1074331663 1074331673 1074331675;}
+@list l1:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:32.2pt;
+	text-indent:-.25in;
+	mso-ansi-font-weight:bold;}
+@list l1:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:68.2pt;
+	text-indent:-.25in;}
+@list l2
+	{mso-list-id:984089797;
+	mso-list-type:hybrid;
+	mso-list-template-ids:467709452 1074331663 1074331673 1074331675 1074331663 1074331673 1074331675 1074331663 1074331673 1074331675;}
+@list l2:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3
+	{mso-list-id:1165046647;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1889539874 1245621204 1074331673 1074331675 1074331663 1074331673 1074331675 1074331663 1074331673 1074331675;}
+@list l3:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:32.2pt;
+	text-indent:-.25in;}
+@list l4
+	{mso-list-id:1215695934;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1066242260 -879988306 1074331673 1074331675 1074331663 1074331673 1074331675 1074331663 1074331673 1074331675;}
+@list l4:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:57.3pt;
+	text-indent:-.25in;}
+@list l5
+	{mso-list-id:1337072576;
+	mso-list-type:hybrid;
+	mso-list-template-ids:714103152 1074331649 1074331651 1074331653 1074331649 1074331651 1074331653 1074331649 1074331651 1074331653;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l6
+	{mso-list-id:1437478111;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-570786634 1074331649 1074331651 1074331653 1074331649 1074331651 1074331653 1074331649 1074331651 1074331653;}
+@list l6:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:74.05pt;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l7
+	{mso-list-id:1642077338;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1044978366 -1735226238 1074331673 1074331675 1074331663 1074331673 1074331675 1074331663 1074331673 1074331675;}
+@list l7:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:57.3pt;
+	text-indent:-.25in;}
+@list l8
+	{mso-list-id:1724060291;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1943210134 1074331649 1074331651 1074331653 1074331649 1074331651 1074331653 1074331649 1074331651 1074331653;}
+@list l8:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:55.0pt;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l9
+	{mso-list-id:1744135729;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1059906258 1074331649 1074331651 1074331653 1074331649 1074331651 1074331653 1074331649 1074331651 1074331653;}
+@list l9:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:57.3pt;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l10
+	{mso-list-id:1763254123;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-377216822 1074331673 1074331673 1074331675 1074331663 1074331673 1074331675 1074331663 1074331673 1074331675;}
+@list l10:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:75.3pt;
+	text-indent:-.25in;}
+@list l11
+	{mso-list-id:1816021379;
+	mso-list-type:hybrid;
+	mso-list-template-ids:418390484 357571254 1074331673 1074331675 1074331663 1074331673 1074331675 1074331663 1074331673 1074331675;}
+@list l11:level1
+	{mso-level-start-at:0;
+	mso-level-text:%1;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:119.25pt;
+	text-indent:-.25in;}
+@list l12
+	{mso-list-id:2061244949;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-800825992 1074331663 1074331673 1074331675 1074331663 1074331673 1074331675 1074331663 1074331673 1074331675;}
+@list l12:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l13
+	{mso-list-id:2132893118;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1909437416 -1914149510 1074331673 1074331675 1074331663 1074331673 1074331675 1074331663 1074331673 1074331675;}
+@list l13:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:57.3pt;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Calibri;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="7170"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'>EXPERIMENT 1: DISCRETE TIME CONVOLUTION<o:p></o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Objective</b>: To
+understand the concept of convolution and simulate simple programs related to
+convolution in Scilab and implement them on TMS320C6713, TMS320VC5510 and
+TMS320VC33 kits.</p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Pre Session Work</b>:
+Convolution is a mathematical way of combining two signals to form a third
+signal. It has applications that include statistics, computer vision, image and
+signal processing, electrical engineering, and differential equations.</p>
+
+<p class=MsoNormal>For complex-valued functions ƒ, <i>g</i> defined on the set <b>Z</b>
+of integers, the <b>discrete convolution</b> of ƒ and <i>g</i> is given by:<o:p></o:p></p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="Picture_x0020_11" o:spid="_x0000_i1025" type="#_x0000_t75"
+ alt="(f * g)[n]\ \stackrel{\mathrm{def}}{=}\ \sum_{m=-\infty}^{\infty} f[m]\, g[n - m]"
+ style='width:210.75pt;height:40.5pt;visibility:visible'>
+ <v:imagedata src="Convolution_files/image001.gif" o:title=", g[n - m]"/>
+</v:shape><![endif]--><![if !vml]><img width=281 height=54
+src="Convolution_files/image001.gif"
+alt="(f * g)[n]\ \stackrel{\mathrm{def}}{=}\ \sum_{m=-\infty}^{\infty} f[m]\, g[n - m]"
+v:shapes="Picture_x0020_11"><![endif]></span><o:p></o:p></p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_12" o:spid="_x0000_i1026" type="#_x0000_t75" alt="= \sum_{m=-\infty}^{\infty} f[n-m]\, g[m]."
+ style='width:2in;height:34.5pt;visibility:visible'>
+ <v:imagedata src="Convolution_files/image002.gif" o:title=", g[m]"/>
+</v:shape><![endif]--><![if !vml]><img width=192 height=46
+src="Convolution_files/image002.gif"
+alt="= \sum_{m=-\infty}^{\infty} f[n-m]\, g[m]." v:shapes="Picture_x0020_12"><![endif]></span><o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Consider two signals f[n] and g[n]. Convolution of these
+signals involves the following steps</p>
+
+<p class=ListParagraphCxSpFirst style='text-indent:-.25in;mso-list:l2 level1 lfo1'><![if !supportLists]><span
+style='mso-bidi-font-family:Calibri'><span style='mso-list:Ignore'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>Folding:
+Fold g[m] about m=0 and obtain g[-m].</p>
+
+<p class=ListParagraphCxSpMiddle style='text-indent:-.25in;mso-list:l2 level1 lfo1'><![if !supportLists]><span
+style='mso-bidi-font-family:Calibri'><span style='mso-list:Ignore'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>Shifting:
+Shift g[-m] by n to the right (left) if n is positive (negative), to obtain g[n
+- m].</p>
+
+<p class=ListParagraphCxSpMiddle style='text-indent:-.25in;mso-list:l2 level1 lfo1'><![if !supportLists]><span
+style='mso-bidi-font-family:Calibri'><span style='mso-list:Ignore'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>Multiplication:
+Multiply f[m] by g[n - m] to obtain the product sequence f[m]g[n - m].</p>
+
+<p class=ListParagraphCxSpMiddle style='text-indent:-.25in;mso-list:l2 level1 lfo1'><![if !supportLists]><span
+style='mso-bidi-font-family:Calibri'><span style='mso-list:Ignore'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>Summation:
+Sum of all values of the product sequence to obtain the value of output.</p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:21.3pt;mso-add-space:auto'><b
+style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-family:Calibri'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:21.3pt;mso-add-space:auto'><b
+style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-family:Calibri'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:0in;mso-add-space:auto'><b
+style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-family:Calibri'>Prelab
+test</span></b><span style='mso-bidi-font-family:Calibri'>: <o:p></o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:0in;mso-add-space:auto'><span
+style='mso-bidi-font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:39.3pt;mso-add-space:auto;
+text-indent:-.25in;mso-list:l0 level1 lfo7'><![if !supportLists]><span
+style='mso-bidi-font-family:Calibri'><span style='mso-list:Ignore'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-bidi-font-family:Calibri'>If N1 is the length of the finite input
+sequence x(n) and N2 is the length of the finite impulse response h(n), express
+the length of the convolved output y(n) in terms of N1 and N2.<o:p></o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:57.3pt;mso-add-space:auto;
+text-indent:-.25in;mso-list:l13 level1 lfo10'><![if !supportLists]><span
+style='mso-bidi-font-family:Calibri'><span style='mso-list:Ignore'>a)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-bidi-font-family:Calibri'>N1<o:p></o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:57.3pt;mso-add-space:auto;
+text-indent:-.25in;mso-list:l13 level1 lfo10'><![if !supportLists]><span
+style='mso-bidi-font-family:Calibri'><span style='mso-list:Ignore'>b)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-bidi-font-family:Calibri'>N2<o:p></o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:57.3pt;mso-add-space:auto;
+text-indent:-.25in;mso-list:l13 level1 lfo10'><![if !supportLists]><span
+style='mso-bidi-font-family:Calibri;background:yellow;mso-highlight:yellow'><span
+style='mso-list:Ignore'>c)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-family:Calibri;
+background:yellow;mso-highlight:yellow'>N1 + N2 – 1<o:p></o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:57.3pt;mso-add-space:auto;
+text-indent:-.25in;mso-list:l13 level1 lfo10'><![if !supportLists]><span
+style='mso-bidi-font-family:Calibri'><span style='mso-list:Ignore'>d)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-bidi-font-family:Calibri'>N1 + N2<o:p></o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:39.3pt;mso-add-space:auto'><span
+style='mso-bidi-font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:39.3pt;mso-add-space:auto;
+text-indent:-.25in;mso-list:l0 level1 lfo7;tab-stops:21.3pt'><![if !supportLists]><span
+style='mso-bidi-font-family:Calibri'><span style='mso-list:Ignore'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-bidi-font-family:Calibri'>Convolution in time domain =
+_______________ in frequency domain.<o:p></o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:56.7pt;mso-add-space:auto;
+text-indent:-.25in;mso-list:l0 level2 lfo7;tab-stops:21.3pt'><![if !supportLists]><span
+style='mso-bidi-font-family:Calibri'><span style='mso-list:Ignore'>a.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-bidi-font-family:Calibri'>Addition<o:p></o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:56.7pt;mso-add-space:auto;
+text-indent:-.25in;mso-list:l0 level2 lfo7;tab-stops:21.3pt'><![if !supportLists]><span
+style='mso-bidi-font-family:Calibri;background:yellow;mso-highlight:yellow'><span
+style='mso-list:Ignore'>b.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-family:Calibri;
+background:yellow;mso-highlight:yellow'>Multiplication<o:p></o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:56.7pt;mso-add-space:auto;
+text-indent:-.25in;mso-list:l0 level2 lfo7;tab-stops:21.3pt'><![if !supportLists]><span
+style='mso-bidi-font-family:Calibri'><span style='mso-list:Ignore'>c.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-bidi-font-family:Calibri'>Convolution<o:p></o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:56.7pt;mso-add-space:auto;
+text-indent:-.25in;mso-list:l0 level2 lfo7;tab-stops:21.3pt'><![if !supportLists]><span
+style='mso-bidi-font-family:Calibri'><span style='mso-list:Ignore'>d.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-bidi-font-family:Calibri'>None of the above<o:p></o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:39.3pt;mso-add-space:auto;
+tab-stops:21.3pt'><span style='mso-bidi-font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:39.3pt;mso-add-space:auto;
+tab-stops:21.3pt'><span style='mso-bidi-font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle><span style='mso-bidi-font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:39.3pt;mso-add-space:auto;
+text-indent:-.25in;mso-list:l0 level1 lfo7;tab-stops:21.3pt'><![if !supportLists]><span
+style='mso-bidi-font-family:Calibri'><span style='mso-list:Ignore'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-bidi-font-family:Calibri'>If two systems with impulse responses
+h1(n) and h2(n) are connected in series, the output of the system is<o:p></o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:57.3pt;mso-add-space:auto;
+text-indent:-.25in;mso-list:l7 level1 lfo9;tab-stops:21.3pt'><![if !supportLists]><span
+style='mso-bidi-font-family:Calibri'><span style='mso-list:Ignore'>a)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-bidi-font-family:Calibri'>h1(n) + h2(n)<o:p></o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:57.3pt;mso-add-space:auto;
+text-indent:-.25in;mso-list:l7 level1 lfo9;tab-stops:21.3pt'><![if !supportLists]><span
+style='mso-bidi-font-family:Calibri'><span style='mso-list:Ignore'>b)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-bidi-font-family:Calibri'>h1(n) x h2(n)<o:p></o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:57.3pt;mso-add-space:auto;
+text-indent:-.25in;mso-list:l7 level1 lfo9;tab-stops:21.3pt'><![if !supportLists]><span
+style='mso-bidi-font-family:Calibri;background:yellow;mso-highlight:yellow'><span
+style='mso-list:Ignore'>c)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-family:Calibri;
+background:yellow;mso-highlight:yellow'>h1(n) * <span
+style='mso-spacerun:yes'> </span>h2(n)<o:p></o:p></span></p>
+
+<p class=ListParagraphCxSpLast style='margin-left:57.3pt;mso-add-space:auto;
+text-indent:-.25in;mso-list:l7 level1 lfo9;tab-stops:21.3pt'><![if !supportLists]><span
+style='mso-bidi-font-family:Calibri'><span style='mso-list:Ignore'>d)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-bidi-font-family:Calibri'>None of the above<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:39.3pt'><span style='mso-bidi-font-family:
+Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=ListParagraphCxSpFirst style='margin-left:21.3pt;mso-add-space:auto'><span
+style='mso-bidi-font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:21.3pt;mso-add-space:auto'><b
+style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-family:Calibri'>Procedure
+to perform the experiment</span></b><span style='mso-bidi-font-family:Calibri'>:<o:p></o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:21.3pt;mso-add-space:auto'>Login
+to the system. Book a slot. Answer all the questions in the questionnaire. If
+all the answers are correct, a link will be activated to access the system.</p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:21.3pt;mso-add-space:auto'><o:p>&nbsp;</o:p></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:21.3pt;mso-add-space:auto'>Once
+the link is active,</p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:21.3pt;mso-add-space:auto'><o:p>&nbsp;</o:p></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:35.45pt;mso-add-space:auto;
+text-indent:-.25in;mso-list:l6 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Load the convolution.sce file in Scilab.</p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:35.45pt;mso-add-space:auto;
+text-indent:-.25in;mso-list:l6 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Enter the values of the signals x(n) and h(n) in
+the form of matrices x and h.</p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:35.45pt;mso-add-space:auto;
+text-indent:-.25in;mso-list:l6 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Save the file.</p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:35.45pt;mso-add-space:auto;
+text-indent:-.25in;mso-list:l6 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Go to Execute-&gt;Load into Scilab or press
+Ctrl-L</p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:35.45pt;mso-add-space:auto;
+text-indent:-.25in;mso-list:l6 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>The result of the convolution will be available
+to you graphically.</p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:35.45pt;mso-add-space:auto;
+text-indent:-.25in;mso-list:l6 level1 lfo4'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Verify the result of the convolution by using
+the convol command.</p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:35.45pt;mso-add-space:auto'><o:p>&nbsp;</o:p></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-left:14.2pt;mso-add-space:auto'><b
+style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-family:Calibri'><span
+style='mso-spacerun:yes'> </span>Post Session work</span></b><span
+style='mso-bidi-font-family:Calibri'>: <o:p></o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
+margin-bottom:5.0pt;margin-left:32.2pt;mso-add-space:auto;text-indent:-.25in;
+mso-list:l3 level1 lfo12'><![if !supportLists]><span style='mso-bidi-font-family:
+Calibri'><span style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-family:Calibri'>Compute
+the convolution y[n] of the signals<o:p></o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
+margin-bottom:5.0pt;margin-left:75.3pt;mso-add-space:auto;text-indent:-.25in;
+mso-list:l0 level2 lfo7'><![if !supportLists]><span style='mso-bidi-font-family:
+Calibri'><span style='mso-list:Ignore'>a.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-family:Calibri'>x[n]
+= </span><span style='font-family:Symbol;mso-bidi-font-family:Calibri'>a</span><span
+style='mso-bidi-font-family:Calibri'>^n for -3&lt;n&lt;5n (Choose any value of </span><span
+style='font-family:Symbol;mso-bidi-font-family:Calibri'>a&gt;1</span><span
+style='mso-bidi-font-family:Calibri'> )<o:p></o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-bottom:5.0pt;mso-add-space:auto'><span
+style='mso-bidi-font-family:Calibri'><span style='mso-spacerun:yes'>          
+</span><span style='mso-tab-count:1'> </span><span
+style='mso-spacerun:yes'>           </span>0 otherwise<o:p></o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-bottom:5.0pt;mso-add-space:auto'><span
+style='mso-bidi-font-family:Calibri'><span style='mso-tab-count:1'>            </span><span
+style='mso-spacerun:yes'> </span>h[n] = 1 for for 0&lt;n&lt;4<o:p></o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
+margin-bottom:5.0pt;margin-left:101.25pt;mso-add-space:auto'><span
+style='mso-bidi-font-family:Calibri'><span style='mso-spacerun:yes'> 
+</span>0<span style='mso-spacerun:yes'>  </span>otherwise <o:p></o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
+margin-bottom:5.0pt;margin-left:75.3pt;mso-add-space:auto;text-indent:-.25in;
+mso-list:l0 level2 lfo7'><![if !supportLists]><span style='mso-bidi-font-family:
+Calibri'><span style='mso-list:Ignore'>b.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-family:Calibri'>x[n]
+= (</span><span style='font-family:Symbol;mso-bidi-font-family:Calibri'>1/3)</span><span
+style='mso-bidi-font-family:Calibri'>n for 0&lt;n&lt;6<o:p></o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-bottom:5.0pt;mso-add-space:auto'><span
+style='mso-bidi-font-family:Calibri'><span style='mso-spacerun:yes'>          
+</span><span style='mso-tab-count:1'> </span><span
+style='mso-spacerun:yes'>           </span>0 otherwise<o:p></o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-bottom:5.0pt;mso-add-space:auto'><span
+style='mso-bidi-font-family:Calibri'><span style='mso-tab-count:1'>            </span><span
+style='mso-spacerun:yes'> </span>h[n] = 1 for for -2&lt;n&lt;2<o:p></o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-bottom:5.0pt;mso-add-space:auto'><span
+style='mso-bidi-font-family:Calibri'><span style='mso-tab-count:1'>            </span><span
+style='mso-spacerun:yes'>           </span>0 otherwise <o:p></o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-bottom:5.0pt;mso-add-space:auto'><span
+style='mso-bidi-font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-bottom:5.0pt;mso-add-space:auto'><span
+style='mso-bidi-font-family:Calibri'>Verify them using the Scilab code
+provided.<o:p></o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-bottom:5.0pt;mso-add-space:auto'><span
+style='mso-bidi-font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
+margin-bottom:5.0pt;margin-left:32.2pt;mso-add-space:auto;text-indent:-.25in;
+mso-list:l3 level1 lfo12'><![if !supportLists]><span style='mso-bidi-font-family:
+Calibri'><span style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-bidi-font-family:Calibri'>When
+does convolution of a sequence x[n] with a sequence h[n] result in the output
+y[n] = x[n]?<o:p></o:p></span></p>
+
+<p class=ListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
+margin-bottom:5.0pt;margin-left:32.2pt;mso-add-space:auto'><span
+style='mso-bidi-font-family:Calibri'>Give example of such a sequence and plot
+it using Scilab.<o:p></o:p></span></p>
+
+<p class=ListParagraphCxSpLast style='margin-top:0in;margin-right:0in;
+margin-bottom:5.0pt;margin-left:32.2pt;mso-add-space:auto'><span
+style='mso-bidi-font-family:Calibri'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:17.45pt'><b style='mso-bidi-font-weight:
+normal'><span style='mso-bidi-font-family:Calibri'>References</span></b><span
+style='mso-bidi-font-family:Calibri'>: <o:p></o:p></span></p>
+
+<p class=ListParagraph style='margin-left:35.45pt;mso-add-space:auto;
+text-indent:-.25in;mso-list:l8 level1 lfo6'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Link to a tutorial to understand the concept of
+convolution better.</p>
+
+<p class=MsoNormal style='text-indent:17.45pt'><a
+href="http://www.jhu.edu/signals/convolve/index.html">http://www.jhu.edu/signals/convolve/index.html</a></p>
+
+<p class=MsoNormal style='text-indent:17.45pt'><a
+href="http://www.jhu.edu/signals/discreteconv2/index.html">http://www.jhu.edu/signals/discreteconv2/index.html</a></p>
+
+</div>
+
+</body>
+
+</html>
